@@ -1,0 +1,31 @@
+311: '""", unsafe_allow_html=True)\n'
+312: 'st.markdown(\'<div class="wave-divider"></div>\', unsafe_allow_html=True)\n'
+313: '\n'
+314: '# â”€â”€ Tabs â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n'
+315: 'tab1, tab2, tab3 = st.tabs([\n'
+316: '    "Executive Dashboard",\n'
+317: '    "ðŸ›°ï¸\x8f Pollution Map",\n'
+318: '    "AI Report"\n'
+319: '])\n'
+320: '\n'
+321: '\n'
+322: '# â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90\n'
+323: '# TAB 1 â€” EXECUTIVE DASHBOARD\n'
+324: '# â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90â•\x90\n'
+325: 'with tab1:\n'
+326: '    # Top KPI metrics\n'
+327: "    avg_ntu    = df['Predicted_NTU'].mean()\n"
+328: "    max_ntu    = df['Predicted_NTU'].max()\n"
+329: "    critical_n = len(df[df['Risk_Level'] == 'Critical'])\n"
+330: "    high_n     = len(df[df['Risk_Level'] == 'High'])\n"
+331: "    avg_health = df['Health_Index'].mean()\n"
+332: '    total_pts  = len(df)\n'
+333: '\n'
+334: '    # 1. SUMMARY LAYER\n'
+335: '    st.markdown(\'<div class="overview-group">\', unsafe_allow_html=True)\n'
+336: '    col1, col2, col3, col4, col5 = st.columns(5)\n'
+337: '    with col1:\n'
+338: '        st.markdown(f\'\'\'<div class="metric-card"><div class="metric-value">{avg_ntu:.0f}</div><div class="metric-label">Avg Turbidity</div></div>\'\'\', unsafe_allow_html=True)\n'
+339: '    with col2:\n'
+340: '        st.markdown(f\'\'\'<div class="metric-card"><div class="metric-value risk-critical">{max_ntu:.0f}</div><div class="metric-label">Peak Turbidity</div></div>\'\'\', unsafe_allow_html=True)\n'
+341: '    with col3:\n'

@@ -1,0 +1,10 @@
+River Detector Metrics
+======================
+Dataset       : C:\Users\karth\Downloads\Hackathon\Final_Innv\Main\outputs\river_dataset.npz
+Model (SavedModel): C:\Users\karth\Downloads\Hackathon\Final_Innv\Main\outputs\river_model
+Model (h5)   : C:\Users\karth\Downloads\Hackathon\Final_Innv\Main\outputs\river_model.h5
+
+Accuracy      : 0.9822
+Precision     : 0.9857
+Recall        : 0.9780
+F1-score      : 0.9818

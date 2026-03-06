@@ -1,0 +1,54 @@
+# Large model files
+outputs/best_fusion_model/
+outputs/river_model/
+outputs/*.h5
+outputs/*.npz
+
+# Satellite TIFFs
+outputs/*.tif
+satellite_data/
+April/
+May/
+Jul/
+Sept/
+Nov/
+Nov (2)/
+Dec/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Logs
+*.log
+archive/
+
+# Streamlit
+.streamlit/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# SECURITY — never commit credentials
+*.json
+service_account
+credentials
+private_key
+
+# Keep these
+!requirements.txt
+!README.md
+!DEMO_GUIDE.md

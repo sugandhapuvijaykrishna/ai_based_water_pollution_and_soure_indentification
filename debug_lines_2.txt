@@ -1,0 +1,21 @@
+381: '        st.subheader("NTU Histogram")\n'
+382: "        fig_hist = px.histogram(df, x='Predicted_NTU', nbins=50, color_discrete_sequence=['#5CA8FF'])\n"
+383: "        fig_hist.update_layout(paper_bgcolor='#0A1628', plot_bgcolor='#0A1628', font=dict(color='#FFFFFF', family='Poppins'), xaxis=dict(gridcolor='#1A4A6B', color='#FFFFFF'), yaxis=dict(gridcolor='#1A4A6B', color='#FFFFFF'), margin=dict(t=30, b=10))\n"
+384: "        st.plotly_chart(fig_hist, width='stretch')\n"
+385: '\n'
+386: '    st.subheader("Spatial Pollution Intensity")\n'
+387: "    fig_scatter = px.scatter(df.sample(min(3000, len(df))), x='Lon', y='Lat', color='Predicted_NTU', color_continuous_scale='RdYlGn_r', size='Predicted_NTU', size_max=12)\n"
+388: "    fig_scatter.update_layout(paper_bgcolor='#0A1628', plot_bgcolor='#0A1628', font=dict(color='#FFFFFF', family='Poppins'), xaxis=dict(gridcolor='#1A4A6B', color='#FFFFFF'), yaxis=dict(gridcolor='#1A4A6B', color='#FFFFFF'), coloraxis_colorbar=dict(title=dict(text='NTU', font=dict(color='#FFFFFF')), tickfont=dict(color='#FFFFFF')), margin=dict(t=30))\n"
+389: "    st.plotly_chart(fig_scatter, width='stretch')\n"
+390: '\n'
+391: 'with tab2:\n'
+392: '    st.subheader("Ÿ›°ï¸\x8f Live Satellite Overlay â€” Krishna River Pollution Map")\n'
+393: '    st.markdown("""\n'
+394: '    <div class="info-box">\n'
+395: '    Click any point on the map to see detailed sensor readings.\n'
+396: '    Red = Critical | Orange = High | Yellow = Moderate | Green = Low\n'
+397: '    </div>""", unsafe_allow_html=True)\n'
+398: '\n'
+399: '    # Subsample for performance\n'
+400: '    map_df = filtered_df.sample(min(max_points, len(filtered_df)), random_state=42) \\\n'
+401: '             if len(filtered_df) > max_points else filtered_df.copy()\n'
